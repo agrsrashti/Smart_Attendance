@@ -16,7 +16,7 @@ var env = process.env.NODE_ENV || 'development';
 
 const server = new ApolloServer({
   cors: {
-    origin: env=="development"? ['http://localhost:3000'] : [''],
+    origin: env=="development"? ['http://localhost:3000'] : ['https://smart-attendance-1401.netlify.app/'],
     credentials: true
   },
   typeDefs,
