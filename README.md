@@ -23,64 +23,8 @@ Facial Analytics API: [Face-API](https://github.com/justadudewhohacks/face-api.j
 2. Open CMD in VSCode, type command: cd client && npm i
 3. Open another terminal, type command: cd server && npm i
 
-### Step 3: Create an account in MongoDB Cloud and configure
+### Step 3: Follow steps given in doc to set env variables
 
-1. Go to https://www.mongodb.com/try to register a free-tier account.
-2. Create a project and create a cluster.
-3. Adding IP whitelist "0.0.0.0" to allow all network access.
-
-### Step 4: Create an account in Cloudinary media storage and configure
-
-1. Go to https://cloudinary.com/users/register/free to register a free-tier account.
-2. You will get an api key and app secret.
-3. In tab "Media Library", create folder named "Attendance".
-4. Inside folder "Attendance", create another two folders named "ProfilePicture" and "FaceGallery".
-5. Click Setting icon on top right.
-6. Under tab "Upload", scroll down until you see "Upload presets".
-7. Click "Add upload preset", set Upload preset name to "attendance_facegallery" and folder set to "Attendance/FaceGallery".
-8. Leave the others as default and click "Save".
-9. Again, click "Add upload preset", set Upload preset name to "attendance_profilepicture" and folder set to "Attendance/ProfilePicture".
-10. Leave the others as default and click "Save".
-
-### Step 5: Create Google OAuth Credential to enable google login and sending email
-
-1. Go to GCP console: https://console.cloud.google.com/apis.
-2. Create an OAuth credential for google login.
-3. Under tab "Credentials", click "Create Credential" and choose "OAuth client ID".
-4. Choose the application type "Web Application".
-5. Name the OAuth client name "Google Login".
-6. Add the javascript origin: http://localhost:3000
-7. Add the redirect uri: https://developers.google.com/oauthplayground.
-8. Click "Save".
-9. Create an OAuth credential for email sending.
-10. Under tab "Credentials", click "Create Credential" and choose "OAuth client ID".
-11. Choose the application type "Web Application".
-12. Name the OAuth client name "Mail".
-13. Add the javascript origin: http://localhost:4000
-14. Add the redirect uri: https://developers.google.com/oauthplayground.
-15. Click "Save".
-16. Under tab "OAuth Consent Screen", enter the required info (app name, app logo, app uri, privacy policy, etc).
-
-### Step 6: Configure server environment variables.
-
-1. Inside the "server" folder, create a file named ".env" used to save the credential data of database, API and so on.
-2. Inside ".env" file, create 10 variables named "MONGO_URI", "SECRET_KEY", "CLOUDINARY_NAME", "CLOUDINARY_API_KEY", "CLOUDINARY_API_SECRET", "GOOGLE_OAUTH_USERNAME", "GOOGLE_OAUTH_CLIENT_ID", "GOOGLE_OAUTH_CLIENT_SECRET", "GOOGLE_OAUTH_REFRESH_TOKEN" and "GOOGLE_OAUTH_REDIRECT_URI".
-3. Go to MongoDB Cloud, select "connect" and choose "Node.js" to get the connection string. Set the MONGO_URI respectively.
-4. Set your SECRET_KEY to any random string.
-5. Go to Cloudinary, copy the app name, id and secret, assigned to CLOUDINARY_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET.
-6. Assign GOOGLE_OAUTH_USERNAME to your gmail (e.g: yourgmailusername@gmail.com)
-7. Go to GCP console, choose the "Attendlytical" project.
-8. Under "Credentials" tab, select "mail" OAuth client, copy the app id and secret, assigned to "GOOGLE_OAUTH_CLIENT_ID" and "GOOGLE_OAUTH_CLIENT_SECRET".
-9. Go to https://developers.google.com/oauthplayground, enter scope: "https://mail.google.com".
-10. Before submiting, click the setting icon on the top right.
-11. Click "Use your own OAuth credentials"
-12. Enter "Client ID" and "Client Secret" of "mail" OAuth client.
-13. Submit the API scope.
-14. You will get an authorization code, exchange it with access token and refresh token.
-15. Assign the refresh token to GOOGLE_OAUTH_REFRESH_TOKEN.
-16. Assign GOOGLE_OAUTH_REDIRECT_URI to https://developers.google.com/oauthplayground.
-
----
 
 ## Pretrained Weight Files
 
