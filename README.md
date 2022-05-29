@@ -43,4 +43,4 @@ Facial Analytics API: [Face-API](https://github.com/justadudewhohacks/face-api.j
 
 ---
 
-
+![Smart Attendance_00001](https://user-images.githubusercontent.com/73165551/170855772-57a350d7-2be0-4c24-93ec-c166282331e5.jpg)
