@@ -1,6 +1,6 @@
 # Smart Attendance
 
-An attendance tracking application with facial recognition.
+An attendance tracking application with facial recognition using face-api.js. The system is a client-server architecture that contains several modules and each module is backed by the resolver in the server to handle GraphQL request query. It is basically designed for education institution that has 2 user roles- lecturer and student.
 
 ## Credit
 
@@ -15,7 +15,7 @@ Facial Analytics API: [Face-API](https://github.com/justadudewhohacks/face-api.j
 
 ### Step 1: Download the source code
 
-1. If you have "git" installed, open CMD and type "git clone https://github.com/
+1. If you have "git" installed, open CMD and type "git clone https://github.com/agrsrashti/Smart_Attendance
 
 ### Step 2: Install the dependency
 
@@ -23,8 +23,8 @@ Facial Analytics API: [Face-API](https://github.com/justadudewhohacks/face-api.j
 2. Open CMD in VSCode, type command: cd client && npm i
 3. Open another terminal, type command: cd server && npm i
 
-### Step 3: Follow steps given in doc to set env variable
-
+### Step 3: Follow steps given in doc to set credentials(env variable)
+      https://docs.google.com/document/d/1kQ-BZwoNjYQRsj0Kuj8kDsK7XypuOEo3WS4FnslEdV4/edit?usp=sharing
 ---
 
 ## Running the application
